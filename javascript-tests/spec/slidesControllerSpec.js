@@ -1,4 +1,4 @@
-describe('Carrossel', function() {	
+describe('Slides Controller', function() {	
 	var slidesController;
   
   beforeEach(function() {
@@ -32,6 +32,29 @@ describe('Carrossel', function() {
     expect(slidesController.currentFirstImageOnViewPort()).toEqual(3);
     slidesController.previous();
     expect(slidesController.currentFirstImageOnViewPort()).toEqual(2);
+  });
+
+  it('should get current first image to be 1 if current first image 5 and hit next', function() {
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(1);
+    slidesController.next();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(2);
+    slidesController.next();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(3);
+    slidesController.next();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(4);
+    slidesController.next();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(5);
+    slidesController.next();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(1);
+    slidesController.next();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(2);
+    slidesController.next();
+  });
+
+  it('should get current first image to be 5 if current first image is 1 and hit previous', function() {
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(1);
+    slidesController.previous();
+    expect(slidesController.currentFirstImageOnViewPort()).toEqual(5);
   });
 
 });
