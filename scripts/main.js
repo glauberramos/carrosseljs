@@ -14,7 +14,20 @@ carrosseljs.main = function() {
   }
 
   window.onload = function() {
-      window.setInterval(autoSlide, 10);
-  }
+      var setIntervalId = window.setInterval(autoSlide, 10);
 
+      document.getElementsByClassName('left')[0].onclick = function() {
+        clearInterval(setIntervalId);
+        slidesController.next();
+
+        document.getElementById('carrossel-list').style.left = slidesController.currentPosition() + 'px';
+      };
+
+      document.getElementsByClassName('right')[0].onclick = function() {
+        clearInterval(setIntervalId);
+        slidesController.next();
+
+        document.getElementById('carrossel-list').style.left = slidesController.currentPosition() + 'px';
+      }   
+  }
 }();
