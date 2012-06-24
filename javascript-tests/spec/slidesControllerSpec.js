@@ -57,4 +57,7 @@ describe('Slides Controller', function() {
     expect(slidesController.currentFirstImageOnViewPort()).toEqual(5);
   });
 
+  it('should get last position of the view port', function() {
+    expect(slidesController.getLastPositionViewPort()).toEqual(-1008);
+  });
 });

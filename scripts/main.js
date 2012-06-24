@@ -4,9 +4,10 @@ carrosseljs.main = function() {
   function autoSlide() {
     var position = document.getElementById('carrossel-list').style.left;
     var nextPosition;
+    var numberedPosition = position.substring(0, position.length - 2);
 
-    if(position != '-1008px') {
-      nextPosition = position.substring(0, position.length - 2) - 1;
+    if(numberedPosition != slidesController.getLastPositionViewPort()) {
+      nextPosition = numberedPosition - 1;
     } else {
       nextPosition = '0';
     }
