@@ -6,6 +6,14 @@
   position: relative;
 }
 
+#header {
+  margin-left: 0.5em;
+  font-family: 'Norican', cursive;
+  font-size: 3em;
+  text-shadow: #DDD 0 1px;
+  text-align: center;
+}
+
 #carrossel #carrossel-list {
   list-style: none;
   width: 1764px;
