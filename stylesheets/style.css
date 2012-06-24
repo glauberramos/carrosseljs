@@ -31,9 +31,9 @@
 }
 
 .left {
-  background: url('images/left.png');
+  background: url('../images/left.png');
 }
 
 .right {
-  background: url('images/right.png');
+  background: url('../images/right.png');
 }
