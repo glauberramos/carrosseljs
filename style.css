@@ -1,0 +1,39 @@
+#carrossel {
+  width: 756px;
+  height: 179px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+#carrossel #carrossel-list {
+  list-style: none;
+  width: 1764px;
+  position: relative;
+  left: 0px;
+  padding-left: 0px;
+  -webkit-padding-start: 0px;
+}
+
+.carrossel-item {
+  float: right;
+  padding: 1px;
+}
+
+.carrossel-item img {
+  width: 250px;
+  height: 179px;
+}
+
+.button {
+  width: 47px;
+  height: 61px;
+}
+
+.left {
+  background: url('images/left.png');
+}
+
+.right {
+  background: url('images/right.png');
+}
