@@ -25,6 +25,9 @@ carrosseljs.SlidesController = function(imageCount, imageWidth) {
     getLastPositionViewPort: function() {
       return - (imageCount - viewPortImagesNumber) * (padding + imageWidth);
     },
+    getLastImageNumber: function() {
+      return imageCount - viewPortImagesNumber + 1;
+    },
     next: function() {
       if(currentFirstImageOnViewPort + viewPortImagesNumber - 1 < imageCount) {
         currentFirstImageOnViewPort = currentFirstImageOnViewPort + 1;

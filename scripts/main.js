@@ -29,14 +29,14 @@ carrosseljs.main = function() {
       document.getElementsByClassName('left')[0].onclick = function() {
         clearInterval(setIntervalId);
         slidesController.previous();
-
+        document.getElementById('carrossel-list').style["-webkit-transition"] = 'left 0.5s'
         document.getElementById('carrossel-list').style.left = slidesController.currentPosition() + 'px';
       };
 
       document.getElementsByClassName('right')[0].onclick = function() {
         clearInterval(setIntervalId);
         slidesController.next();
-
+        document.getElementById('carrossel-list').style["-webkit-transition"] = 'left 0.5s'
         document.getElementById('carrossel-list').style.left = slidesController.currentPosition() + 'px';
       }   
   }
