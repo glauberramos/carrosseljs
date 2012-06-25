@@ -22,6 +22,10 @@ describe('Slides Controller', function() {
     expect(slidesController.currentPosition()).toEqual(-504);
     slidesController.previous();
     expect(slidesController.currentPosition()).toEqual(-252);
+    slidesController.previous();
+    expect(slidesController.currentPosition()).toEqual(0);
+    slidesController.previous();
+    expect(slidesController.currentPosition()).toEqual(-1008);
   });
 
   it('should get current first image number on view port', function() {
