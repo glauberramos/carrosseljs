@@ -1,35 +1,27 @@
 carrosseljs.main = function() {
   var slidesController = new carrosseljs.SlidesController(7, 250);
-  var resetIntervalId;
 
   function autoSlide() {
     var position = document.getElementById('carrossel-list').style.left;
     var numberedPosition = position.substring(0, position.length - 2);
-    var nextPosition;
+    var nextPosition = numberedPosition - 1;
 
-    if(numberedPosition != slidesController.getLastPositionViewPort()) {
-      nextPosition = numberedPosition - 1;
-    } else {
-      resetIntervalId = window.setInterval(smoothlyReset, 1);
+    if(numberedPosition <= slidesController.getLastPositionViewPort()) {
+      window.setTimeout(smoothlyReset, 1);
     }
     
     document.getElementById('carrossel-list').style.left = nextPosition + 'px';
   };
-
+  
   function smoothlyReset() {
     var position = document.getElementById('carrossel-list').style.left;
-    var numberedPosition = position.substring(0, position.length - 2);
-    var nextPosition;
-
-    if(numberedPosition < 0) {
-      nextPosition = parseFloat(numberedPosition) + 10;
-    } else {
-      clearInterval(resetIntervalId);
-      nextPosition = '0';
+    var newPosition = parseFloat(position.substring(0, position.length -2)) + 10;
+      
+    if(newPosition < -10) {
+      document.getElementById('carrossel-list').style.left = newPosition + 'px';
+      window.setTimeout(smoothlyReset, 1);
     }
-
-    document.getElementById('carrossel-list').style.left = nextPosition + 'px';
-  };
+  }
 
   window.onload = function() {
       var setIntervalId = window.setInterval(autoSlide, 10);
