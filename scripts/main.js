@@ -36,7 +36,7 @@ carrosseljs.main = function() {
 
       document.getElementsByClassName('left')[0].onclick = function() {
         clearInterval(setIntervalId);
-        slidesController.next();
+        slidesController.previous();
 
         document.getElementById('carrossel-list').style.left = slidesController.currentPosition() + 'px';
       };
