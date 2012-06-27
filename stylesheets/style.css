@@ -1,6 +1,6 @@
 #carrossel {
-  width: 756px;
-  height: 179px;
+  width: 1056px;
+  height: 250px;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -15,7 +15,7 @@
 
 #carrossel #carrossel-list {
   list-style: none;
-  width: 1764px;
+  width: 2464px;
   position: relative;
   left: 0px;
   padding-left: 0px;
@@ -28,8 +28,8 @@
 }
 
 .carrossel-item img {
-  width: 250px;
-  height: 179px;
+  width: 350px;
+  height: 250px;
 }
 
 .button {
@@ -38,7 +38,7 @@
   width: 47px;
   height: 61px;
   position: absolute;
-  top: 70px;
+  top: 110px;
   z-index: 200;
 }
 
@@ -52,5 +52,5 @@
 
 .right {
   background: url('../images/right.png');
-  left: 716px;
+  left: 1016px;
 }

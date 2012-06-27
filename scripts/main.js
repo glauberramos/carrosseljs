@@ -1,5 +1,5 @@
 carrosseljs.main = function() {
-  var slidesController = new carrosseljs.SlidesController(7, 250);
+  var slidesController = new carrosseljs.SlidesController(7, 350);
 
   function autoSlide() {
     var position = document.getElementById('carrossel-list').style.left;
