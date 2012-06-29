@@ -14,6 +14,7 @@
 }
 
 #carrossel #carrossel-list {
+  margin: 0;
   list-style: none;
   width: 2464px;
   position: relative;
@@ -35,7 +36,7 @@
 .button {
   opacity: 0.6;
   border: 0;
-  width: 47px;
+  width: 40px;
   height: 61px;
   position: absolute;
   top: 110px;
