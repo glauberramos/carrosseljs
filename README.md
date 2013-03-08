@@ -7,6 +7,6 @@
 
 - TODO
   * Create description to add to the images
-  * Create feedbacks elements to see which part the carrossel current is
+  * Create feedbacks e lements to see which part the carrossel current is
   * Create a plugin to be reused in other pages
   * Open image when clicking on it (http://lokeshdhakar.com/projects/lightbox2/)
